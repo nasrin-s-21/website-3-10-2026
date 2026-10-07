@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Session | Skill Exchange</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="video">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">S</span>
+          <span>Skill Exchange</span>
+        </a>
+        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="search.html">Explore Skills</a>
+          <a href="connections.html">Connections</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="profile.html?myProfile=true">My Profile</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container page-content video-session-page">
+      <section class="video-header card-style">
+        <div>
+          <span class="eyebrow">Skill Exchange Learning Session</span>
+          <h2>Learning: <span id="session-skill">Python</span></h2>
+        </div>
+        <div class="session-user-meta">
+          <strong>Mentor:</strong>
+          <span id="session-mentor">Arun Kumar</span>
+        </div>
+      </section>
+
+      <section class="video-grid">
+        <div class="video-panel card-style">
+          <div class="video-stage mentor-stage">
+            <video id="mentor-video" autoplay playsinline muted></video>
+            <div class="video-label">Mentor</div>
+            <div id="mentor-person-name" class="video-name">Arun Kumar</div>
+          </div>
+        </div>
+        <div class="video-panel card-style">
+          <div class="video-stage user-stage">
+            <video id="local-video" autoplay playsinline muted></video>
+            <div class="video-label">You</div>
+            <div id="local-user-name" class="video-name">You</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="session-controls card-style">
+        <button class="control-btn" data-control="mic">🎤 Microphone</button>
+        <button class="control-btn" data-control="camera">📹 Camera</button>
+        <button class="control-btn" data-control="screen">🖥 Screen Share</button>
+        <button class="control-btn" data-control="chat">💬 Chat</button>
+        <button class="control-btn danger" data-control="end">📞 End Session</button>
+      </section>
+
+      <section class="session-chat-layout">
+        <div class="chat-panel card-style">
+          <div class="chat-header">
+            <h3>Session Chat</h3>
+          </div>
+          <div id="chat-messages" class="chat-messages"></div>
+          <div class="chat-input-row">
+            <input id="chat-input" type="text" placeholder="Type your message..." aria-label="Type a chat message" />
+            <button id="send-chat" class="primary-btn">Send</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/video.js"></script>
+  </body>
+</html>

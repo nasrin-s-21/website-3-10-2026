@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in | Skill Exchange</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="login" class="auth-page">
+    <main class="auth-layout">
+      <section class="auth-intro">
+        <a href="login.html" class="brand"><span class="brand-mark">S</span><span>Skill Exchange</span></a>
+        <div>
+          <span class="eyebrow">A community for curious people</span>
+          <h1>Trade what you know for what you want to learn.</h1>
+          <p>Find your people, share a skill, and make time for learning together.</p>
+        </div>
+        <p class="auth-footnote">Your profile starts with your words. Add only what you want to share.</p>
+      </section>
+      <section class="auth-form-panel">
+        <div class="auth-form-heading">
+          <span class="eyebrow">Welcome</span>
+          <h2>Get started</h2>
+          <p>Sign in or create your account to continue.</p>
+        </div>
+        <div class="auth-mode-switch" role="group" aria-label="Account action">
+          <button type="button" data-auth-mode="create">Create account</button>
+          <button type="button" data-auth-mode="signin">Sign in</button>
+        </div>
+        <form id="auth-form" class="auth-form">
+          <div class="field-group" id="auth-name-field">
+            <label for="auth-name">Your name</label>
+            <input id="auth-name" name="name" autocomplete="name" required />
+          </div>
+          <div class="field-group">
+            <label for="auth-email">Email</label>
+            <input id="auth-email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="field-group">
+            <label for="auth-password">Password</label>
+            <input id="auth-password" name="password" type="password" autocomplete="current-password" minlength="6" required />
+          </div>
+          <p id="auth-error" class="form-error" aria-live="polite"></p>
+          <button id="auth-submit" class="primary-btn" type="submit">Create account</button>
+        </form>
+        <p class="auth-note">Prototype accounts are stored in this browser only.</p>
+      </section>
+    </main>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

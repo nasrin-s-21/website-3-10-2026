@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill Exchange Database</title>
+    <link rel="stylesheet" href="/database.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <span class="eyebrow">Local backend</span>
+        <h1>Database</h1>
+      </div>
+      <div class="status"><span class="status-dot"></span><span id="connection-status">Connecting...</span></div>
+    </header>
+    <main class="workspace">
+      <aside class="table-nav">
+        <div class="aside-heading"><strong>Tables</strong><button id="refresh-button" type="button" title="Refresh database">Refresh</button></div>
+        <nav id="table-list" aria-label="Database tables"></nav>
+        <div class="database-location">
+          <span>SQLite file</span>
+          <code id="database-path">Loading path...</code>
+        </div>
+      </aside>
+      <section class="data-view">
+        <div class="data-heading">
+          <div><h2 id="active-table">Choose a table</h2><p id="row-count">Pick a table to inspect its records.</p></div>
+          <span class="local-label">Local machine only</span>
+        </div>
+        <div id="table-content" class="table-content"><p class="empty-state">Select a table from the left.</p></div>
+      </section>
+    </main>
+    <script src="/database.js"></script>
+  </body>
+</html>

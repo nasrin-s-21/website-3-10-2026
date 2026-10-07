@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore Skills | Skill Exchange</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="search">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">S</span>
+          <span>Skill Exchange</span>
+        </a>
+        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="search.html" class="active">Explore Skills</a>
+          <a href="connections.html">Connections</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="profile.html?myProfile=true">My Profile</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container page-content">
+      <section class="search-hero card-style">
+        <form id="search-form" class="search-form hero-search" autocomplete="off">
+          <input id="search-input" type="text" placeholder="Search for a skill like Python, Java, or UI/UX" aria-label="Search skill" />
+          <button type="submit">Search</button>
+        </form>
+      </section>
+
+      <section class="filter-layout">
+        <aside class="filter-panel card-style">
+          <h3>Filters</h3>
+
+          <div class="filter-group">
+            <label>Experience</label>
+            <select id="filterExperience">
+              <option value="all">All</option>
+              <option value="Beginner">Beginner</option>
+              <option value="Intermediate">Intermediate</option>
+              <option value="Advanced">Advanced</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label>Availability</label>
+            <select id="filterAvailability">
+              <option value="all">All</option>
+              <option value="Available">Available</option>
+              <option value="Busy">Busy</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label>Certifications</label>
+            <select id="filterCertification">
+              <option value="all">Any</option>
+              <option value="certified">Certified</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label>Rating</label>
+            <select id="filterRating">
+              <option value="0">Any</option>
+              <option value="4">4+</option>
+              <option value="4.5">4.5+</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label>Skill Level</label>
+            <select id="filterSkillLevel">
+              <option value="all">All</option>
+              <option value="Beginner">Beginner</option>
+              <option value="Intermediate">Intermediate</option>
+              <option value="Advanced">Advanced</option>
+            </select>
+          </div>
+
+          <button id="clear-filters" class="secondary-btn full-width">Clear Filters</button>
+        </aside>
+
+        <div class="results-panel">
+          <div class="results-header">
+            <h2 id="search-results-title">Search Results</h2>
+            <span id="results-count" class="count-pill">0 People Found</span>
+          </div>
+          <div id="search-results" class="results-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/search.js"></script>
+  </body>
+</html>

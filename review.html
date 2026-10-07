@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session Review | Skill Exchange</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="review" class="review-page">
+    <main class="review-layout">
+      <a href="index.html" class="brand"><span class="brand-mark">S</span><span>Skill Exchange</span></a>
+      <section class="review-form-panel">
+        <span class="eyebrow">Session complete</span>
+        <h1>How was your exchange?</h1>
+        <p id="review-session-details" class="review-session-details"></p>
+        <form id="session-review-form" class="edit-profile-form">
+          <div class="field-group full">
+            <label for="review-rating">Your rating</label>
+            <select id="review-rating" name="rating" required>
+              <option value="5">5 - Excellent</option>
+              <option value="4">4 - Good</option>
+              <option value="3">3 - It was okay</option>
+              <option value="2">2 - Could be better</option>
+              <option value="1">1 - Not helpful</option>
+            </select>
+          </div>
+          <div class="field-group full">
+            <label for="review-text">Share a few words</label>
+            <textarea id="review-text" name="text" placeholder="What did you learn?" required minlength="3"></textarea>
+          </div>
+          <button type="submit" class="primary-btn">Submit review</button>
+        </form>
+      </section>
+    </main>
+    <div id="toast" class="toast" aria-live="polite"></div>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/review.js"></script>
+  </body>
+</html>

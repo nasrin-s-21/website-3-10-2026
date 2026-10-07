@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile | Skill Exchange</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="profile">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">S</span>
+          <span>Skill Exchange</span>
+        </a>
+        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="search.html">Explore Skills</a>
+          <a href="connections.html">Connections</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="profile.html?myProfile=true" class="active">My Profile</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container page-content profile-page" id="profile-page-content"></main>
+
+    <div id="request-modal" class="modal hidden" aria-modal="true" role="dialog">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3>Send Skill Exchange Request?</h3>
+          <button type="button" class="close-modal" aria-label="Close modal">×</button>
+        </div>
+        <p id="request-modal-description"></p>
+        <textarea id="request-message" placeholder="Write a short message..."></textarea>
+        <div class="modal-actions">
+          <button type="button" class="secondary-btn" id="cancel-request">Cancel</button>
+          <button type="button" class="primary-btn" id="send-request-btn">Send Request</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/profile.js"></script>
+  </body>
+</html>

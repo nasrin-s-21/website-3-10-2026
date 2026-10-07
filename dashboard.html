@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Skill Exchange</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="dashboard">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">S</span>
+          <span>Skill Exchange</span>
+        </a>
+        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="search.html">Explore Skills</a>
+          <a href="connections.html">Connections</a>
+          <a href="dashboard.html" class="active">Dashboard</a>
+          <a href="profile.html?myProfile=true">My Profile</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container page-content dashboard-page">
+      <section class="dashboard-header card-style">
+        <div>
+          <span class="eyebrow">Your activity</span>
+          <h2 id="dashboard-greeting">Welcome back, Keerthana!</h2>
+        </div>
+      </section>
+
+      <section class="stats-grid">
+        <div class="stat-card card-style">
+          <span>Skills I Know</span>
+          <strong id="stat-skills-known">0</strong>
+        </div>
+        <div class="stat-card card-style">
+          <span>Skills I Want to Learn</span>
+          <strong id="stat-skills-learning">0</strong>
+        </div>
+        <div class="stat-card card-style">
+          <span>Connections</span>
+          <strong id="stat-connections">0</strong>
+        </div>
+        <div class="stat-card card-style">
+          <span>Learning Sessions</span>
+          <strong id="stat-sessions">0</strong>
+        </div>
+      </section>
+
+      <section class="two-column-layout dashboard-grid">
+        <div class="card-style">
+          <h3>My Skills</h3>
+          <div id="skills-known-list" class="chip-list"></div>
+        </div>
+
+        <div class="card-style">
+          <h3>Skills I Want to Learn</h3>
+          <div id="skills-learning-list" class="chip-list"></div>
+        </div>
+      </section>
+
+      <section class="two-column-layout dashboard-grid">
+        <div class="card-style">
+          <h3>Pending Requests</h3>
+          <div id="pending-requests-list" class="stack-list"></div>
+        </div>
+
+        <div class="card-style">
+          <h3>My Connections</h3>
+          <div id="my-connections-list" class="stack-list"></div>
+        </div>
+      </section>
+    </main>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/connections.js"></script>
+  </body>
+</html>
